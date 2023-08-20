@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>another calculator</title>
+<style>
+body{
+    /*background: radial-gradient(circle,#0f0c29, #302b63, #24243e);*/
+    background: radial-gradient(circle,#33ccff , #ff99cc);
+}
+div#container{
+    /*background-image: radial-gradient(circle, #c6ffdd, #fbd786, #f7797d);*/
+    height: 500px;
+    width: 400px;
+    margin: auto;
+    margin-top: 15vh;
+}
+#enter{
+    margin-left: 0;
+    width: 393px;
+    height: 50px;
+    font-size: 25px;
+    background-color: white;
+}
+.ib{
+    margin-right: 0px;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    font-size: 20px;
+    /*border: 0;
+    background-color: white;*/
+    background-color: transparent;
+    border: 0;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.color{
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    height: 400px;
+    width: 400px;
+    margin-top: -400px;
+    background-image: radial-gradient(circle, #fc5c7d, #6a82fb);
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+
+<!-- <form action=""><input type="text" placeholder="enter the calculation" id="enter"></form> -->
+<input id="enter" type="text" value="" autocomplete="on">
+<div class="row">
+<button id="clear" class="ib" onclick="clearing()">CLEAR</button>
+<button id="delete" class="ib" onclick="del()">DELETE</button>
+<button id="modulus" class="ib" onclick="modulus()">%</button>
+<button id="division" class="ib" onclick="divi()">/</button>
+</div>
+
+
+<div class="row">
+<button id="7" class="ib" onclick="seven()">7</button>
+<button id="8" class="ib" onclick="eight()">8</button>
+<button id="9" class="ib" onclick="nine()">9</button>
+<button id="multiplication" class="ib" onclick="mult()">*</button>
+</div>
+
+<div class="row">
+<button id="4" class="ib" onclick="four()">4</button>
+<button id="5" class="ib" onclick="five()">5</button>
+<button id="6" class="ib" onclick="six()">6</button>
+<button id="subtraction" class="ib" onclick="sub()">-</button>
+</div>
+
+<div class="row">
+<button id="1" class="ib" onclick="one()">1</button>
+<button id="2" class="ib" onclick="two()">2</button>
+<button id="3" class="ib" onclick="three()">3</button>
+<button id="addition" class="ib" onclick="add()">+</button>
+</div>
+
+<div class="row">
+<button id="sqrt" class="ib" onclick="sqrt()">sqrt</button>
+<button id="0" class="ib" onclick="zero()">0</button>
+<button id="decimal" class="ib" onclick="dot()">.</button>
+<button id="equals to" class="ib" onclick="eq()">=</button>
+</div>
+<div class="color"></div>
+</div>
+<script src="ancalc.js"></script>
+</body>
+</html>
